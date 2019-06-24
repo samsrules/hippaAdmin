@@ -17,6 +17,7 @@ import './firebase';
 // app component
 import App from './container/App';
 
+
 import { configureStore } from './store';
 
 const MainApp = () => (
