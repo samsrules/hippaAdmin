@@ -14,6 +14,7 @@ import {
 /**
  * initial auth user
  */
+
 const INIT_STATE = {
     user: localStorage.getItem('user_id'),
     loading: false

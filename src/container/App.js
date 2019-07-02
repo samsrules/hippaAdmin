@@ -21,11 +21,6 @@ import RctDefaultLayout from './DefaultLayout';
 // boxed layout
 import RctBoxedLayout from './RctBoxedLayout';
 
-// app signin
-import AppSignIn from './SigninFirebase';
-import AppSignUp from './SignupFirebase';
-
-
 // async components
 import {
 	AsyncSessionLoginComponent,
@@ -72,6 +67,7 @@ const InitialPath = ({ component: Component, ...rest, authUser }) =>
 class App extends Component {
 	render() {
 		const { location, match, user } = this.props;
+		console.log('user---'+user)
 		if (location.pathname === '/') {
 			if (user === null) {
 				return (<Redirect to={'/signin'} />);
@@ -92,7 +88,7 @@ class App extends Component {
 				<Route path="/boxed" component={RctBoxedLayout} />
 				{/* <Route path="/signin" component={AppSignIn} /> */}
 				<Route path="/signin" component={AsyncSessionLoginComponent} />
-				<Route path="/signup" component={AppSignUp} />
+				{/* <Route path="/signup" component={AppSignUp} /> */}
 				<Route path="/session/login" component={AsyncSessionLoginComponent} />
 				<Route path="/session/register" component={AsyncSessionRegisterComponent} />
 				<Route path="/session/lock-screen" component={AsyncSessionLockScreenComponent} />

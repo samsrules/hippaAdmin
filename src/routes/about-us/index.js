@@ -24,11 +24,9 @@ class AboutUs extends Component {
     this.state ={
       content:'',
       errAbout:'',
-      
     }
 
    
-
     this.handleEditorChange=this.handleEditorChange.bind(this);
   }
 
@@ -77,8 +75,6 @@ class AboutUs extends Component {
     return (
 
       
-
-       
       <div className="editor-wrapper">
        
 

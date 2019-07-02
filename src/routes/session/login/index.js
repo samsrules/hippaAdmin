@@ -35,18 +35,7 @@ class Signin extends Component {
    }
   
 
-  /**
-   * On User Login
-   */
-  // onUserLogin() {
-  //   if (this.state.email !== '' && this.state.password !== '') {
-  //     let users = {
-  //       email:this.state.email,
-  //       password:this.state.password
-  //     }
-  //     this.props.userSignIn(users,this.props.history);
-  //   }
-  // }
+
 
   onUserLogin = e => { 
     let self= this;

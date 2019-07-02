@@ -22,11 +22,11 @@ export const userSignIn = (user, history) => (dispatch) => {
      .then((res)=>{
         if(res.data.status==1){
             var userInfo = res.data.data;
-            localStorage.setItem("user_id", userInfo._id);
+            //localStorage.setItem("user_id", userInfo._id);
             localStorage.setItem("firstName", userInfo.firstName);
             localStorage.setItem("lastName", userInfo.firstName);
             localStorage.setItem("profilePic", userInfo.profilePic);
-            dispatch({ type: LOGIN_USER_SUCCESS, payload: localStorage.getItem('user_id') });
+            dispatch({ type: LOGIN_USER_SUCCESS, payload: userInfo._id });
             history.push('/');
             NotificationManager.success('User Login Successfully!');
 

@@ -86,11 +86,7 @@ const AsyncSessionForgotPasswordComponent = Loadable({
 	loading: () => <RctPageLoader />,
 });
 
-// chat app
-const AsyncChatComponent = Loadable({
-	loader: () => import("Routes/chat"),
-	loading: () => <RctPageLoader />,
-});
+
 
 export {
 	AsyncCommunicationComponent,
@@ -103,7 +99,6 @@ export {
 	AsyncSessionLoginComponent,
 	AsyncSessionRegisterComponent,
 	AsyncSessionForgotPasswordComponent,
-	AsyncChatComponent,
 	AsyncAboutUsComponent,
 	AsyncNotificationListComponent
 };
